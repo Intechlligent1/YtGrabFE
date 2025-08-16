@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .bg-grid-white {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 30px 30px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 2px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1.5px, transparent 1px);
+  background-size: 50px 50px;
   background-position: center center;
 }
 
@@ -19,4 +19,23 @@
   inset: 0;
   background: radial-gradient(circle at 50% -100%, #4c1d95 0%, transparent 50%);
   opacity: 0.4;
+}
+
+@keyframes particle-move {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-100px) translateX(20px); }
+}
+
+.animate-particle-move {
+  animation: particle-move 20s linear infinite alternate;
+}
+
+.bg-particle-pattern {
+  background-image: radial-gradient(circle, rgba(165, 180, 252, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-grid-\[#2A1B6A\] {
+  background-image: linear-gradient(to right, #2A1B6A 1px, transparent 1px), 
+                   linear-gradient(to bottom, #2A1B6A 1px, transparent 1px);
 }
